@@ -1,0 +1,28 @@
+{
+    "appId": "at.matteovalentini.app.electron-vite-react",
+    "directories": {
+        "output": "dist"
+    },
+    "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true,
+        "shortcutName": "electron-vite-react"
+    },
+    "win": {
+        "target": "portable"
+    },
+    "files": [
+        {
+            "from": "build/main",
+            "to": "main",
+            "filter": ["**/*"]
+        },
+        {
+            "from": "build/renderer",
+            "to": "renderer",
+            "filter": ["**/*"]
+        },
+        "package.json"
+    ]
+}
